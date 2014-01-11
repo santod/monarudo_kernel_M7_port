@@ -1,0 +1,23 @@
+CROSS_COMPILE=~/arm
+HOST_CC=gcc
+LOCAL_BUILD_DIR=~/home/santod/vinyl
+TARGET_DIR=~//home/santod/vinyl/arch/arm/boot
+SYSTEM_PARTITION="/dev/block/mmcblk0p19"
+DEFCONFIG=dlx_defconfig
+
+FLASH_BOOT='write_raw_image("/tmp/boot.img", "boot")'
+
+# ----
+
+N_CORES=4
+VERSION=NuK3rn3l
+
+# ----
+
+BANNER=`cat <<EOF
+ui_print("**********************************************");
+ui_print("*                                            *");
+ui_print("  VERSION: NuK3rn3l                     ");
+ui_print("*                                            *");
+ui_print("**********************************************");
+EOF`
