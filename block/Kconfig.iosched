@@ -54,6 +54,7 @@ config CFQ_GROUP_IOSCHED
 	---help---
 	  Enable group IO scheduling in CFQ.
 
+<<<<<<< HEAD
 config IOSCHED_ROW
         tristate "ROW I/O scheduler"
         ---help---
@@ -110,6 +111,8 @@ config IOSCHED_VR
          Requests are chosen according to SSTF with a penalty of rev_penalty
          for switching head direction.
 
+=======
+>>>>>>> 254ef5fe8e034df9d4bf4e443b7e915d35208848
 choice
 	prompt "Default I/O scheduler"
 	default DEFAULT_CFQ
@@ -126,6 +129,7 @@ choice
 	config DEFAULT_NOOP
 		bool "No-op"
 
+<<<<<<< HEAD
 	config DEFAULT_ROW
                 bool "ROW" if IOSCHED_ROW=y
 
@@ -141,6 +145,8 @@ choice
         config DEFAULT_VR
                 bool "V(R)" if IOSCHED_VR=y
 
+=======
+>>>>>>> 254ef5fe8e034df9d4bf4e443b7e915d35208848
 endchoice
 
 config DEFAULT_IOSCHED
@@ -148,11 +154,14 @@ config DEFAULT_IOSCHED
 	default "deadline" if DEFAULT_DEADLINE
 	default "cfq" if DEFAULT_CFQ
 	default "noop" if DEFAULT_NOOP
+<<<<<<< HEAD
 	default "row" if DEFAULT_ROW
 	default "bfq" if DEFAULT_BFQ
 	default "sio" if DEFAULT_SIO
 	default "zen" if DEFAULT_ZEN
 	default "vr" if DEFAULT_VR
+=======
+>>>>>>> 254ef5fe8e034df9d4bf4e443b7e915d35208848
 
 endmenu
 

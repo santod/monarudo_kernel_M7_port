@@ -88,6 +88,7 @@ config CPU_FREQ_DEFAULT_GOV_ONDEMAND
 	  governor. If unsure have a look at the help section of the
 	  driver. Fallback governor will be the performance governor.
 
+<<<<<<< HEAD
 config CPU_FREQ_DEFAULT_GOV_BADASS
 	bool "badass"
 	select CPU_FREQ_GOV_BADASS
@@ -101,6 +102,8 @@ config CPU_FREQ_DEFAULT_GOV_BADASS
 
 	  If in doubt, say N
 
+=======
+>>>>>>> 254ef5fe8e034df9d4bf4e443b7e915d35208848
 config CPU_FREQ_DEFAULT_GOV_CONSERVATIVE
 	bool "conservative"
 	select CPU_FREQ_GOV_CONSERVATIVE
@@ -176,6 +179,7 @@ config CPU_FREQ_GOV_PERFORMANCE
 
 	  If in doubt, say Y.
 
+<<<<<<< HEAD
 config CPU_FREQ_GOV_BADASS
 	tristate "'badass' cpufreq governor"
 	depends on CPU_FREQ
@@ -235,6 +239,8 @@ config CPU_FREQ_GOV_BADASS_ALLOW_BYPASS
 	help
 	  'allow_bypass' - This driver adds a bypass to the phases
 
+=======
+>>>>>>> 254ef5fe8e034df9d4bf4e443b7e915d35208848
 config CPU_FREQ_GOV_POWERSAVE
 	tristate "'powersave' governor"
 	help

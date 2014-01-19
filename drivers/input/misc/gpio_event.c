@@ -22,10 +22,13 @@
 #include <linux/slab.h>
 #include <mach/board_htc.h>
 
+<<<<<<< HEAD
 #ifdef CONFIG_TOUCHSCREEN_SYNAPTICS_SWEEP2WAKE
 #include <linux/synaptics_i2c_rmi.h>
 #endif
 
+=======
+>>>>>>> 254ef5fe8e034df9d4bf4e443b7e915d35208848
 struct gpio_event {
 	struct gpio_event_input_devs *input_devs;
 	const struct gpio_event_platform_data *info;
@@ -181,12 +184,15 @@ static int gpio_event_probe(struct platform_device *pdev)
 					event_info->name : event_info->names[i];
 		input_dev->event = gpio_input_event;
 		ip->input_devs->dev[i] = input_dev;
+<<<<<<< HEAD
 #ifdef CONFIG_TOUCHSCREEN_SYNAPTICS_SWEEP2WAKE
 		if (!strcmp(input_dev->name, "keypad_8960")) {
 			sweep2wake_setdev(input_dev);
 			printk(KERN_INFO "[sweep2wake]: set device %s\n", input_dev->name);
 		}
 #endif
+=======
+>>>>>>> 254ef5fe8e034df9d4bf4e443b7e915d35208848
 	}
 	ip->input_devs->count = dev_count;
 	ip->info = event_info;
